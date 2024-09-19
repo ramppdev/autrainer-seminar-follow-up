@@ -1,0 +1,17 @@
+defaults:
+  - _autrainer_
+  - _self_
+
+results_dir: results
+experiment_id: default
+iterations: 20
+
+hydra:
+  sweeper:
+    params:
+      +seed: 1
+      +batch_size: 32
+      +learning_rate: 0.001
+      dataset: ESC50-32k, ESC50-MFCC-32k
+      model: CRNN
+      optimizer: Adam
